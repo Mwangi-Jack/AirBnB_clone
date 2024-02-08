@@ -26,12 +26,10 @@ class FileStorage:
 		Returns:
 			None
         """
-        class_name = obj. __class__.__name__
-        obj_id = obj.id
+        class_name = obj['__class__']
+        obj_id = obj["id"]
         key = f"{class_name}.{obj_id}"
         self.__objects[key] = obj
-        print("NEW OBJECT:::::::", obj)
-
 
     def save(self):
         """To serialize __objects to the JSON file"""

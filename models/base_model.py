@@ -4,6 +4,7 @@
 
 import uuid
 from datetime import datetime
+
 from models import storage
 
 class BaseModel:
@@ -25,21 +26,16 @@ class BaseModel:
         Returns:
             None
         """
-
-        if not kwargs["id"]:
-            storage.new(kwargs)
-
         if kwargs:
             self.id = kwargs["id"]
             self.created_at = kwargs["created_at"]
         else:
             self.id = str(uuid.uuid4())
-            self.created_at = datetime.now()
-
-
+            self.created_at = datetime.now().isoformat()
 
         self.__dict__["__class__"] = type(self).__name__
         self.updated_at = datetime.now().isoformat()
+        storage.new(self.__dict__)
 
 
     def save(self):
