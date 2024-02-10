@@ -1,20 +1,30 @@
 #!/usr/bin/python3
 
 import uuid
-from datetime import date, datetime
+from datetime import datetime
+
+from models import storage
 
 class BaseModel:
     """This class defines all common attributes/methods for other classes"""
 
-    def __init__(self):
+    DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
+    def __init__(self, *args, **kwargs):
         """initialization of an instance"""
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if kwargs:
+            self.id = kwargs['id']
+            self.created_at = datetime.strptime(kwargs['created_at'], self.DATE_FORMAT)
+            self.updated_at = datetime.strptime(kwargs['updated_at'], self.DATE_FORMAT)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+            storage.new(self.__dict__)
 
     def save(self):
         """updates the public instance attribute 'updated_at' with the current datetime"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """creates a dictionary representation of the class """
