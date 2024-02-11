@@ -28,6 +28,7 @@ class BaseModel:
         Returns:
             None
         """
+        print("KWARGS:::::", kwargs)
         if kwargs:
             self.id = kwargs["id"]
             self.created_at = datetime.strptime(kwargs["created_at"], self.DATE_FORMAT)
