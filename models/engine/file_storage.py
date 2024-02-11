@@ -7,10 +7,9 @@ import os
 
 class FileStorage:
     """FileStorage class"""
+    __file_path = 'file.json'
+    __objects = {}
 
-    def __init__(self, *args, **kwargs):
-        self.__file_path = "file.json"
-        self.__objects = {}
 
 
     def all(self):
@@ -26,15 +25,19 @@ class FileStorage:
 		Returns:
 			None
         """
-        class_name = obj['__class__']
-        obj_id = obj["id"]
+        class_name = obj.__class__.__name__
+        obj_id = obj.id
         key = f"{class_name}.{obj_id}"
         self.__objects[key] = obj
 
     def save(self):
         """To serialize __objects to the JSON file"""
+        serialized_objects = {}
+        for key, value in self.__objects.items():
+            serialized_objects[key] = value.to_dict()
+
         with open(self.__file_path, 'w', encoding='utf-8') as json_file:
-            json.dump(self.__objects, json_file, indent=4)
+            json.dump(serialized_objects, json_file, indent=4)
 
     def reload(self):
         """
@@ -43,5 +46,10 @@ class FileStorage:
         """
         if os.path.exists(self.__file_path):
             with open(self.__file_path, 'r', encoding='utf-8') as json_file:
-                self.__objects = json.load(json_file)
+                data = json.load(json_file)
+                for key, value in data.items():
+                    class_name, obj_id = key.split('.')
+                    module = __import__('models.base_model', fromlist=[class_name])
+                    cls = getattr(module, class_name)
+                    self.__objects[key] = cls(**value)
 
