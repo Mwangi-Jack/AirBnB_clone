@@ -5,10 +5,14 @@ from datetime import datetime
 from unittest.mock import patch, MagicMock
 import sys
 import os
+from models.base_model import BaseModel
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
-from models.base_model import BaseModel
+
+
+
+
 
 
 class TestBaseModel(unittest.TestCase):
@@ -21,7 +25,8 @@ class TestBaseModel(unittest.TestCase):
 
     def test_id_created_at_updated_at(self):
         """
-        Test if BaseModel instance has id, created_at, and updated_at attributes.
+        Test if BaseModel instance has id, created_at,
+        and updated_at attributes.
         """
         self.assertTrue(hasattr(self.base_model, 'id'))
         self.assertTrue(hasattr(self.base_model, 'created_at'))
@@ -38,10 +43,13 @@ class TestBaseModel(unittest.TestCase):
         test_id = 'test-id'
         test_created_at = datetime.now().strftime(BaseModel.DATE_FORMAT)
         test_updated_at = datetime.now().strftime(BaseModel.DATE_FORMAT)
-        base_model = BaseModel(id=test_id, created_at=test_created_at, updated_at=test_updated_at)
+        base_model = BaseModel(id=test_id, created_at=test_created_at,
+                               updated_at=test_updated_at)
         self.assertEqual(base_model.id, test_id)
-        self.assertEqual(base_model.created_at.strftime(BaseModel.DATE_FORMAT), test_created_at)
-        self.assertEqual(base_model.updated_at.strftime(BaseModel.DATE_FORMAT), test_updated_at)
+        self.assertEqual(base_model.created_at.strftime(BaseModel.DATE_FORMAT),
+                         test_created_at)
+        self.assertEqual(base_model.updated_at.strftime(BaseModel.DATE_FORMAT),
+                         test_updated_at)
         mock_storage.new.assert_not_called()
 
     @patch('models.storage')
@@ -72,8 +80,10 @@ class TestBaseModel(unittest.TestCase):
         expected_dict = {
             'id': self.base_model.id,
             '__class__': 'BaseModel',
-            'created_at': self.base_model.created_at.isoformat(),
-            'updated_at': self.base_model.updated_at.isoformat()
+            'created_at':
+                self.base_model.created_at.isoformat(),
+            'updated_at':
+                self.base_model.updated_at.isoformat()
         }
         self.assertDictEqual(self.base_model.to_dict(), expected_dict)
 
@@ -81,8 +91,8 @@ class TestBaseModel(unittest.TestCase):
         """
         Test the string representation of BaseModel.
         """
-        expected_str = f"[BaseModel] {self.base_model.id} {self.base_model.__dict__}"
-        self.assertEqual(str(self.base_model), expected_str)
+        str = f"[BaseModel] {self.base_model.id} {self.base_model.__dict__}"
+        self.assertEqual(str(self.base_model), str)
 
 
 if __name__ == '__main__':

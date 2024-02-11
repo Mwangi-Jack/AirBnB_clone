@@ -4,12 +4,11 @@ import unittest
 import json
 import os
 import sys
+from models.engine.file_storage import FileStorage
+from models.base_model import BaseModel
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
-
-from models.engine.file_storage import FileStorage
-from models.base_model import BaseModel
 
 
 class TestFileStorage(unittest.TestCase):
@@ -34,14 +33,16 @@ class TestFileStorage(unittest.TestCase):
 
     def test_new(self):
         """
-        Test whether the new method correctly adds the object to the __objects dictionary.
+        Test whether the new method correctly adds the
+        object to the __objects dictionary.
         """
         obj_key = f"{self.test_obj.__class__.__name__}.{self.test_obj.id}"
         self.assertIn(obj_key, self.storage.all())
 
     def test_save_and_reload(self):
         """
-        Test whether saving and reloading the FileStorage instance correctly persists and retrieves objects from the JSON file.
+        Test whether saving and reloading the FileStorage
+        instance correctly persists and retrieves objects from the JSON file.
         """
         self.storage.save()
         new_storage = FileStorage()
@@ -50,6 +51,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertIn(obj_key, new_storage.all())
         self.assertIsInstance(new_storage.all()[obj_key], BaseModel)
         self.assertEqual(new_storage.all()[obj_key].id, self.test_obj.id)
+
 
 if __name__ == '__main__':
     unittest.main()
