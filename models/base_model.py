@@ -20,7 +20,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self.to_dict())
+            storage.new(self)
 
     def save(self):
         """updates the public instance attribute 'updated_at' with the current datetime"""
@@ -30,14 +30,10 @@ class BaseModel:
     def to_dict(self):
         """creates a dictionary representation of the class """
         obj = self.__dict__.copy()
-        # print("OBJECT:::", obj)
-        # print("TYPE created_at:::", type(obj['created_at'].isoformat()))
-        # print("TYPE updated_at:::", type(obj['updated_at'].isoformat()))
         obj['__class__'] = self.__class__.__name__
         obj['created_at'] = self.created_at.isoformat()
         obj['updated_at'] = self.updated_at.isoformat()
 
-        # print("STRING REPRESENTATION:::::", self.__dict__)
         return obj
 
     def __str__(self):
