@@ -7,8 +7,12 @@ from models import storage
 
 from models.base_model import BaseModel
 
+
 class HBNBCommand(cmd.Cmd):
-    """Accepts commands via the normal interactive prompt or on the command line."""
+    """
+    Accepts commands via the normal interactive
+    prompt or on the command line.
+    """
     prompt = "(hbnb) "
 
     def do_create(self, args):
@@ -23,7 +27,11 @@ class HBNBCommand(cmd.Cmd):
         print(new_model.id)
 
     def do_show(self, args):
-        """Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234"""
+        """
+        Prints the string representation of an instance based
+        on the class name and id.
+        Ex: $ show BaseModel 1234-1234-1234
+        """
         all_objs = storage.all()
         obj_ids = []
         obj_names = []
@@ -32,7 +40,6 @@ class HBNBCommand(cmd.Cmd):
             obj_name, obj_id = key.split(".")
             obj_ids.append(obj_id)
             obj_names.append(obj_name)
-
 
         args_len = len(args.split())
 
@@ -50,23 +57,6 @@ class HBNBCommand(cmd.Cmd):
                 key = f"{class_name_inpt}.{class_id_inpt}"
                 print(all_objs[key])
 
-
-
-
-
-
-        # print(all_objs)
-        # for key, value in all_objs.items():
-        #      class_name, obj_id = key.split(".")
-        #      print(class_name, obj_id)
-
-
-
-
-
-
-
-
     def do_quit(self, args):
         """Quit command to exit the program"""
         return True
@@ -79,9 +69,10 @@ class HBNBCommand(cmd.Cmd):
         """Called when an empty line is entered"""
         pass
 
-if __name__ == '__main__':
-    if len(sys.argv) > 1:
-        HBNBCommand().onecmd(' '.join(sys.argv[1:]))
-    else:
-        HBNBCommand().cmdloop()
 
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
+    # if len(sys.argv) > 1:
+    #     HBNBCommand().onecmd(' '.join(sys.argv[1:]))
+    # else:
+    #     HBNBCommand().cmdloop()

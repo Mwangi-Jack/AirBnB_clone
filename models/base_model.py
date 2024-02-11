@@ -5,16 +5,20 @@ from datetime import datetime
 
 from models import storage
 
+
 class BaseModel:
     """This class defines all common attributes/methods for other classes"""
 
     DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
+
     def __init__(self, *args, **kwargs):
         """initialization of an instance"""
         if kwargs:
             self.id = kwargs['id']
-            self.created_at = datetime.strptime(kwargs['created_at'], self.DATE_FORMAT)
-            self.updated_at = datetime.strptime(kwargs['updated_at'], self.DATE_FORMAT)
+            self.created_at = datetime.strptime(kwargs['created_at'],
+                                                self.DATE_FORMAT)
+            self.updated_at = datetime.strptime(kwargs['updated_at'],
+                                                self.DATE_FORMAT)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
@@ -22,7 +26,10 @@ class BaseModel:
             storage.new(self)
 
     def save(self):
-        """updates the public instance attribute 'updated_at' with the current datetime"""
+        """
+        updates the public instance attribute 'updated_at'
+        with the current datetime
+        """
         self.updated_at = datetime.now()
         storage.save()
 
