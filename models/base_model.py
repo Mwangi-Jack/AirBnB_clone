@@ -11,7 +11,6 @@ class BaseModel:
     DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
     def __init__(self, *args, **kwargs):
         """initialization of an instance"""
-        print("KWARGS::::", kwargs)
         if kwargs:
             self.id = kwargs['id']
             self.created_at = datetime.strptime(kwargs['created_at'], self.DATE_FORMAT)

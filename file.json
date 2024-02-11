@@ -3,6 +3,24 @@
         "id": "d914fd11-21b7-4575-b6af-56c53e0bb6b7",
         "created_at": "2024-02-11T13:24:05.354262",
         "updated_at": "2024-02-11T13:24:05.354300",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.77366e9a-dceb-4a7b-af4f-a3dac55f40e1": {
+        "id": "77366e9a-dceb-4a7b-af4f-a3dac55f40e1",
+        "created_at": "2024-02-11T14:17:26.807104",
+        "updated_at": "2024-02-11T14:17:26.807125",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.72b24a79-e162-4ad4-ae56-d956040a2e0c": {
+        "id": "72b24a79-e162-4ad4-ae56-d956040a2e0c",
+        "created_at": "2024-02-11T14:17:33.582865",
+        "updated_at": "2024-02-11T14:17:33.582875",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.a60924a9-093c-4f57-98c7-338c0370b3db": {
+        "id": "a60924a9-093c-4f57-98c7-338c0370b3db",
+        "created_at": "2024-02-11T14:18:18.678455",
+        "updated_at": "2024-02-11T14:18:18.678464",
         "name": "My_First_Model",
         "my_number": 89,
         "__class__": "BaseModel"
