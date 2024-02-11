@@ -11,10 +11,6 @@ parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
 
 
-
-
-
-
 class TestBaseModel(unittest.TestCase):
     """Test class for the BaseModel class"""
     def setUp(self):
