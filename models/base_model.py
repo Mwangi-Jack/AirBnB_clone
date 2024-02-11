@@ -11,6 +11,7 @@ class BaseModel:
     DATE_FORMAT = "%Y-%m-%dT%H:%M:%S.%f"
     def __init__(self, *args, **kwargs):
         """initialization of an instance"""
+        print("KWARGS::::", kwargs)
         if kwargs:
             self.id = kwargs['id']
             self.created_at = datetime.strptime(kwargs['created_at'], self.DATE_FORMAT)
@@ -19,21 +20,25 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self.__dict__)
+            storage.new(self.to_dict())
 
     def save(self):
         """updates the public instance attribute 'updated_at' with the current datetime"""
-        self.updated_at = datetime.now().isoformat()
+        self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):
         """creates a dictionary representation of the class """
-        # obj = self.__dict__.copy()
-        self.__dict__['__class__'] = self.__class__.__name__
-        self.__dict__['created_at'] = self.created_at.isoformat()
-        self.__dict__['updated_at'] = self.updated_at.isoformat()
-        print("STRING REPRESENTATION:::::", self.__dict__)
-        return self.__dict__
+        obj = self.__dict__.copy()
+        # print("OBJECT:::", obj)
+        # print("TYPE created_at:::", type(obj['created_at'].isoformat()))
+        # print("TYPE updated_at:::", type(obj['updated_at'].isoformat()))
+        obj['__class__'] = self.__class__.__name__
+        obj['created_at'] = self.created_at.isoformat()
+        obj['updated_at'] = self.updated_at.isoformat()
+
+        # print("STRING REPRESENTATION:::::", self.__dict__)
+        return obj
 
     def __str__(self):
         """"returns a string representation of an instance """

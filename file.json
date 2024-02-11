@@ -1,0 +1,26 @@
+{
+    "dict.af9bbb1b-9b8e-4f8a-85b8-99813ba04ef3": {
+        "id": "af9bbb1b-9b8e-4f8a-85b8-99813ba04ef3",
+        "created_at": "2024-02-11T12:10:40.970178",
+        "updated_at": "2024-02-11T12:10:40.970190",
+        "__class__": "BaseModel"
+    },
+    "dict.7e1fd20a-672e-4f90-a21c-517a50a57172": {
+        "id": "7e1fd20a-672e-4f90-a21c-517a50a57172",
+        "created_at": "2024-02-11T12:10:46.388032",
+        "updated_at": "2024-02-11T12:10:46.388043",
+        "__class__": "BaseModel"
+    },
+    "dict.ee33398b-7db1-4ee9-80fb-ebb02cb74461": {
+        "id": "ee33398b-7db1-4ee9-80fb-ebb02cb74461",
+        "created_at": "2024-02-11T12:11:32.202534",
+        "updated_at": "2024-02-11T12:11:32.202549",
+        "__class__": "BaseModel"
+    },
+    "dict.471ccfe8-10a2-4b7e-b261-aea59800b41d": {
+        "id": "471ccfe8-10a2-4b7e-b261-aea59800b41d",
+        "created_at": "2024-02-11T12:11:39.098430",
+        "updated_at": "2024-02-11T12:11:39.098445",
+        "__class__": "BaseModel"
+    }
+}
