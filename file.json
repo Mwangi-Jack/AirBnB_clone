@@ -22,5 +22,13 @@
         "created_at": "2024-02-11T16:34:13.688719",
         "updated_at": "2024-02-11T16:34:13.688756",
         "__class__": "BaseModel"
+    },
+    "BaseModel.c5f88dee-cecd-4376-b763-128920c972eb": {
+        "id": "c5f88dee-cecd-4376-b763-128920c972eb",
+        "created_at": "2024-02-11T18:35:59.959573",
+        "updated_at": "2024-02-11T18:35:59.959634",
+        "name": "My First Model",
+        "my_number": 89,
+        "__class__": "BaseModel"
     }
 }
