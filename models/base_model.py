@@ -38,4 +38,3 @@ class BaseModel:
     def __str__(self):
         """"returns a string representation of an instance """
         return f"[{self.__class__.__name__}] {self.id} {self.__dict__}"
-
