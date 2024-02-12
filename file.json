@@ -1,0 +1,98 @@
+{
+    "BaseModel.5e34333f-1a32-4039-a3dc-14f56993d663": {
+        "id": "5e34333f-1a32-4039-a3dc-14f56993d663",
+        "created_at": "2024-02-12T13:47:52.035676",
+        "updated_at": "2024-02-12T13:47:52.035698",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.a673f149-a797-440a-8071-d00270406a11": {
+        "id": "a673f149-a797-440a-8071-d00270406a11",
+        "created_at": "2024-02-12T13:47:52.035835",
+        "updated_at": "2024-02-12T13:47:52.035840",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.7b2f6eb0-0dc5-446c-a5dd-bd61dc1031f3": {
+        "id": "7b2f6eb0-0dc5-446c-a5dd-bd61dc1031f3",
+        "created_at": "2024-02-12T13:47:52.040735",
+        "updated_at": "2024-02-12T13:47:52.041813",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.5fd41551-9bb5-4016-bc9b-dab32ba6b045": {
+        "id": "5fd41551-9bb5-4016-bc9b-dab32ba6b045",
+        "created_at": "2024-02-12T13:56:43.295994",
+        "updated_at": "2024-02-12T13:56:43.296003",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.8a62ad9e-759e-4c5e-a439-d6c46d9cc5fc": {
+        "id": "8a62ad9e-759e-4c5e-a439-d6c46d9cc5fc",
+        "created_at": "2024-02-12T13:56:43.296120",
+        "updated_at": "2024-02-12T13:56:43.296125",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.42de720f-24c4-40a2-8be7-d708f5c734bf": {
+        "id": "42de720f-24c4-40a2-8be7-d708f5c734bf",
+        "created_at": "2024-02-12T13:56:43.296355",
+        "updated_at": "2024-02-12T13:56:43.297106",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.299b12aa-179c-4bc6-86ec-004ae52d7168": {
+        "id": "299b12aa-179c-4bc6-86ec-004ae52d7168",
+        "created_at": "2024-02-12T14:06:49.997845",
+        "updated_at": "2024-02-12T14:06:49.997859",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.b6173c87-9e9c-49af-9366-b7e418c5eb66": {
+        "id": "b6173c87-9e9c-49af-9366-b7e418c5eb66",
+        "created_at": "2024-02-12T14:06:49.998020",
+        "updated_at": "2024-02-12T14:06:49.998027",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.b82615b4-0f54-4b9e-be8d-dcb01f14b49c": {
+        "id": "b82615b4-0f54-4b9e-be8d-dcb01f14b49c",
+        "created_at": "2024-02-12T14:06:49.998337",
+        "updated_at": "2024-02-12T14:06:49.999582",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.d2901a8c-f4a0-433c-a0fc-261832ebf0ca": {
+        "id": "d2901a8c-f4a0-433c-a0fc-261832ebf0ca",
+        "created_at": "2024-02-12T14:17:34.654713",
+        "updated_at": "2024-02-12T14:17:34.654725",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.cf09c217-c31d-4d36-bc81-6e74d077704e": {
+        "id": "cf09c217-c31d-4d36-bc81-6e74d077704e",
+        "created_at": "2024-02-12T14:17:34.654867",
+        "updated_at": "2024-02-12T14:17:34.654871",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.6428b196-9f3d-4a83-b213-77e51500a246": {
+        "id": "6428b196-9f3d-4a83-b213-77e51500a246",
+        "created_at": "2024-02-12T14:17:34.655129",
+        "updated_at": "2024-02-12T14:17:34.655151",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.88e722bc-2f49-48d6-8301-a1282be9b6f1": {
+        "id": "88e722bc-2f49-48d6-8301-a1282be9b6f1",
+        "created_at": "2024-02-12T14:18:08.515889",
+        "updated_at": "2024-02-12T14:18:08.515909",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.1ca4e190-5f4f-4b45-9258-c90f71be00e5": {
+        "id": "1ca4e190-5f4f-4b45-9258-c90f71be00e5",
+        "created_at": "2024-02-12T14:32:56.248145",
+        "updated_at": "2024-02-12T14:32:56.248156",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.2033aed9-9e0c-40f2-bb89-b17be86930a1": {
+        "id": "2033aed9-9e0c-40f2-bb89-b17be86930a1",
+        "created_at": "2024-02-12T14:32:56.248405",
+        "updated_at": "2024-02-12T14:32:56.248411",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.df1225f2-87cc-444c-9ae7-43beb80ee07b": {
+        "id": "df1225f2-87cc-444c-9ae7-43beb80ee07b",
+        "created_at": "2024-02-12T14:32:56.248754",
+        "updated_at": "2024-02-12T14:32:56.248778",
+        "__class__": "BaseModel"
+    }
+}

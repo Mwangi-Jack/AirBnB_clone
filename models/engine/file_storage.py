@@ -3,6 +3,7 @@
 import json
 import os
 
+
 class FileStorage:
     """This class Serializes/Deserializes JSON files"""
 
@@ -17,7 +18,7 @@ class FileStorage:
         """
         sets in __objects the obj with key <obj class name>.id
         """
-        key = f"{obj.__class__}.{obj.id}"
+        key = f"{obj.__class__.__name__}.{obj.id}"
         self.__objects[key] = obj
 
     def save(self):
@@ -26,8 +27,8 @@ class FileStorage:
         for key, value in self.__objects.items():
             serialized_obj[key] = value.to_dict()
 
-        with open(self.__file_path, 'r', encoding='utf-8') as json_file:
-            json.dump(serialized_obj, json_file)
+        with open(self.__file_path, 'w', encoding='utf-8') as json_file:
+            json.dump(serialized_obj, json_file, indent=4)
 
     def reload(self):
         """
