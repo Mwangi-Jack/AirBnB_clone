@@ -14,7 +14,9 @@ class TestBaseModel(unittest.TestCase):
         self.new_model = BaseModel()
 
     def test_constructor(self):
-        """Test the constructor of the BaseModel class."""
+        """
+        Test the constructor of the BaseModel class.
+        """
         self.assertIsInstance(self.new_model.id, str)
         self.assertIsInstance(self.new_model.created_at, datetime)
         self.assertIsInstance(self.new_model.updated_at, datetime)
@@ -41,7 +43,9 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(_str, str(self.new_model))
 
     def test_constructor_with_arguments(self):
-        """Test the constructor of the BaseModel class with keyword arguments"""
+        """
+        Test the constructor of the BaseModel class with keyword arguments
+        """
         kwargs = {
             'id': str(uuid.uuid4()),
             'created_at': '2024-02-12T10:26:27.647394',
@@ -49,8 +53,11 @@ class TestBaseModel(unittest.TestCase):
         }
         new_model = BaseModel(**kwargs)
         self.assertEqual(new_model.id, kwargs['id'])
-        self.assertEqual(new_model.created_at.isoformat(), kwargs['created_at'])
-        self.assertEqual(new_model.updated_at.isoformat(), kwargs['created_at'])
+        self.assertEqual(new_model.created_at.isoformat(),
+                         kwargs['created_at'])
+        self.assertEqual(new_model.updated_at.isoformat(),
+                         kwargs['created_at'])
+
 
 if __name__ == '__main__':
     unittest.main()
