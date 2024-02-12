@@ -2,7 +2,6 @@
 
 import unittest
 from datetime import datetime
-import uuid
 from ..models.base_model import BaseModel
 
 
@@ -37,8 +36,9 @@ class TestBaseModel(unittest.TestCase):
 
     def test_str(self):
         """Test the string representation of the BaseModel class."""
-        expected_string = f"[BaseModel] ({self.base_model.id}) {self.base_model.__dict__}"
-        self.assertEqual(expected_string, str(self.base_model))
+        exst = f"[BaseModel] ({self.base_model.id}) {self.base_model.__dict__}"
+        self.assertEqual(exst, str(self.base_model))
+
 
 if __name__ == '__main__':
     unittest.main()
