@@ -22,8 +22,12 @@ class FileStorage:
 
     def save(self):
         """Serializes __object to the JSON file"""
+        serialized_obj = {}
+        for key, value in self.__objects.items():
+            serialized_obj[key] = value.to_dict()
+
         with open(self.__file_path, 'r', encoding='utf-8') as json_file:
-            json.dump(self.__objects, json_file)
+            json.dump(serialized_obj, json_file)
 
     def reload(self):
         """
@@ -31,4 +35,11 @@ class FileStorage:
         (only if the JSON file __file_path exists)
         """
         if os.path.exists(self.__file_path):
-            pass
+            with open(self.__file_path, 'r', encoding='utf-8') as json_file:
+                data = json.load(json_file)
+                for key, value in data.items():
+                    class_name, obj_id = key.split('.')
+                    module = __import__('models.base_model',
+                                        fromlist=[class_name])
+                    cls = getattr(module, class_name)
+                    self.__objects[key] = cls(**value)
