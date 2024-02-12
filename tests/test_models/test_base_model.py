@@ -24,9 +24,6 @@ class TestBaseModel(unittest.TestCase):
 
     def test_save(self):
         """Test the save method of the BaseModel class."""
-        # previous_updated_at = self.new_model.updated_at
-        # self.new_model.save()
-        # self.assertNotEqual(previous_updated_at, self.new_model.updated_at)
         self.assertTrue(len(self.new_model.save.__doc__) > 0)
         previous_updated_at = self.new_model.updated_at
         time.sleep(0.01)
