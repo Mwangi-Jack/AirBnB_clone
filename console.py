@@ -6,7 +6,7 @@ import cmd
 class HBNBCommand(cmd.Cmd):
     """The commandline console"""
 
-    prompt = "(hbnb) "
+    prompt: str = '(hbnb) '
 
     def do_EOF(self, arg):
         """EOF command to exit the program"""
