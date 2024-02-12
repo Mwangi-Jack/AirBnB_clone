@@ -13,12 +13,8 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_quit(self, arg):
-        """Quit command to exit the program"""
+        """Quit command to exit the program\n"""
         return True
-
-    def help_quit(self):
-        """Prints help for the quit command"""
-        print("Quit command to exit the program\n")
 
     def emptyline(self):
         """An empty line should not execute anything"""
