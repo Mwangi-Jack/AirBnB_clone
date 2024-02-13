@@ -7,6 +7,7 @@ import json
 import os
 from models.base_model import BaseModel
 from models import storage
+from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
@@ -16,10 +17,10 @@ class HBNBCommand(cmd.Cmd):
     fetched_objects = storage.all()
     all_classnames = []
     all_ids = []
-    for key, value in fetched_objects.items():
+    for key in fetched_objects.keys():
         classname, class_id = key.split('.')
         all_classnames.append(classname)
-        all_ids.append(class_id)
+
 
     def do_EOF(self, arg):
         """EOF command to exit the program"""
@@ -43,7 +44,6 @@ class HBNBCommand(cmd.Cmd):
             else:
                 new_model = BaseModel()
                 new_model.save()
-                self.all_ids.append(new_model.id)
                 print(new_model.id)
 
     def do_show(self, arg):
@@ -62,12 +62,11 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
         else:
             arg_classname, arg_id = arg.split(" ")
-            if arg_id not in self.all_ids:
+            key = f"{arg_classname}.{arg_id}"
+            if key not in self.fetched_objects:
                 print("** no instance found **")
             else:
-                key = f"{arg_classname}.{arg_id}"
-                print(self.fetched_objects.get(key))
-                # print(f"{arg_classname} {arg_id}")
+                print(self.fetched_objects[key])
 
     def do_destroy(self, arg):
         """Deletes an instance and saves the changes  into the JSON file"""
@@ -81,16 +80,12 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
         else:
             arg_classname, arg_id = arg.split(" ")
-            if arg_id not in self.all_ids:
-                print("** no instance found **")
-            else:
-                key = f"{arg_classname}.{arg_id}"
+            key = f"{arg_classname}.{arg_id}"
+            if key in self.fetched_objects:
                 del self.fetched_objects[key]
-                for obj in self.fetched_objects.values():
-                    new_model = obj
-                    new_model.save()
-                self.all_ids.remove(arg_id)
-        self.fetched_objects = storage.all()
+                FileStorage().save()
+            else:
+                print("** no instance found **")
 
     def do_all(self, arg):
         """prints string representation of all instances"""
@@ -125,7 +120,8 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
         elif arg_len < 3:
             classname, class_id = arg.split(" ")
-            if class_id not in self.all_ids:
+            key = f"{classname}.{class_id}"
+            if key not in self.fetched_objects:
                 print("** no instance found **")
             else:
                 print("** attribute name missing **")
