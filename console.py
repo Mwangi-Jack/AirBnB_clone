@@ -10,6 +10,9 @@ from models import storage
 from models.engine.file_storage import FileStorage
 
 
+classes = {"BaseModel": BaseModel}
+
+
 class HBNBCommand(cmd.Cmd):
     """The commandline console"""
 
@@ -20,7 +23,6 @@ class HBNBCommand(cmd.Cmd):
     for key in fetched_objects.keys():
         classname, class_id = key.split('.')
         all_classnames.append(classname)
-
 
     def do_EOF(self, arg):
         """EOF command to exit the program"""
@@ -38,71 +40,82 @@ class HBNBCommand(cmd.Cmd):
         """Creates a new instance of the BaseModel"""
         if not arg:
             print("** class name missing **")
-        else:
-            if arg not in self.all_classnames:
-                print("** class doesn't exist **")
-            else:
-                new_model = BaseModel()
-                new_model.save()
-                print(new_model.id)
+            return
+
+        args = arg.split()
+
+        if args[0] not in classes:
+            print("** class doesn't exist **")
+            return
+
+        new_inst = classes[args[0]]()
+        new_inst.save()
+        print(new_inst.id)
 
     def do_show(self, arg):
         """
         prints the string representation of an instance
         based on the class name and id
         """
-        self.fetched_objects = storage.all()
-        arg_len = len(arg.split())
-        if arg_len < 1:
+        if not arg:
             print("** class name missing **")
-        elif arg_len < 2:
-            if arg not in self.all_classnames:
-                print("** class doesn't exist **")
-            else:
-                print("** instance id missing **")
+            return
+
+        args = arg.split()
+
+        if args[0] not in classes:
+            print("** class doesn't exist **")
+            return
+
+        if len(args) < 2:
+            print("** instance id missing **")
+            return
+
+        key = f"{args[0]}.{args[1]}"
+        objects = storage.all()
+        if key in objects:
+            print(objects[key])
         else:
-            arg_classname, arg_id = arg.split(" ")
-            key = f"{arg_classname}.{arg_id}"
-            if key not in self.fetched_objects:
-                print("** no instance found **")
-            else:
-                print(self.fetched_objects[key])
+            print("** no instance found **")
 
     def do_destroy(self, arg):
         """Deletes an instance and saves the changes  into the JSON file"""
-        arg_len = len(arg.split())
-        if arg_len < 1:
+        if not arg:
             print("** class name missing **")
-        elif arg_len < 2:
-            if arg not in self.all_classnames:
-                print("** class doesn't exist **")
-            else:
-                print("** instance id missing **")
+            return
+
+        args = arg.split()
+        if args[0] not in classes:
+            print("** class doesn't exist **")
+            return
+
+        if len(args) < 2:
+            print("** instance id missing **")
+            return
+
+        key = f"{args[0]}.{args[1]}"
+        objects = storage.all()
+        if key in objects:
+            del objects[key]
+            storage.save()
         else:
-            arg_classname, arg_id = arg.split(" ")
-            key = f"{arg_classname}.{arg_id}"
-            if key in self.fetched_objects:
-                del self.fetched_objects[key]
-                FileStorage().save()
-            else:
-                print("** no instance found **")
+            print("** no instance found **")
+            return
 
     def do_all(self, arg):
         """prints string representation of all instances"""
-        str_rpr = []
-        if arg:
-            if arg not in self.all_classnames:
-                print("** class doesn't exist **")
-            else:
+        if arg and arg not in classes:
+            print("** class doesn't exist **")
+            return
 
-                for value in self.fetched_objects.values():
-                    if value.__class__.__name__ == "BaseModel":
-                        str_rpr.append(str(value))
-                print(str_rpr)
+        objects = storage.all()
+        if arg:
+            objs = [str(v) for k, v in objects.items()
+                    if k.startswith(arg + ".")]
         else:
-            for value in self.fetched_objects.values():
-                str_rpr.append(str(value))
-            print(str_rpr)
+            objs = [str(v) for v in objects.values()]
+
+        print(objs)
 
     def do_update(self, arg):
         """
@@ -110,30 +123,35 @@ class HBNBCommand(cmd.Cmd):
         by adding or updating attribute.
         Usage: update <class name> <id> <attribute name> "<attribute value>"
         """
-        arg_len = len(arg.split())
-        if arg_len < 1:
+        if not arg:
             print("** class name missing **")
-        elif arg_len < 2:
-            if arg not in self.all_classnames:
-                print("** class doesn't exist **")
-            else:
-                print("** instance id missing **")
-        elif arg_len < 3:
-            classname, class_id = arg.split(" ")
-            key = f"{classname}.{class_id}"
-            if key not in self.fetched_objects:
-                print("** no instance found **")
-            else:
-                print("** attribute name missing **")
-        elif arg_len < 4:
+            return
+        args = arg.split()
+        if args[0] not in classes:
+            print("** class doesn't exist **")
+            return
+
+        if len(args) < 2:
+            print("** instance id missing **")
+            return
+
+        key = f"{args[0]}.{args[1]}"
+        objects = storage.all()
+        if key not in objects:
+            print("** no instance found **")
+            return
+
+        if len(args) < 3:
+            print("** attribute name missing **")
+            return
+
+        if len(args) < 4:
             print("** value missing **")
-        else:
-            classname, class_id, attr, val = arg.split()
-            key = f"{classname}.{class_id}"
-            to_update = self.fetched_objects.get(key)
-            setattr(to_update, attr, val)
-            to_update.save()
-            print(to_update)
+            return
+
+        obj = objects[key]
+        setattr(obj, args[2], args[3])
+        storage.save()
 
 
 if __name__ == '__main__':

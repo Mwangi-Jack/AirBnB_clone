@@ -94,5 +94,17 @@
         "created_at": "2024-02-13T16:06:00.431620",
         "updated_at": "2024-02-13T16:06:00.431659",
         "__class__": "BaseModel"
+    },
+    "BaseModel.f72efbcc-09d9-4470-bb70-2cc2d48c06a8": {
+        "id": "f72efbcc-09d9-4470-bb70-2cc2d48c06a8",
+        "created_at": "2024-02-13T16:49:57.296532",
+        "updated_at": "2024-02-13T16:49:57.296553",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.b62bb8d1-6aff-4d64-8362-d632a3cbbee8": {
+        "id": "b62bb8d1-6aff-4d64-8362-d632a3cbbee8",
+        "created_at": "2024-02-13T16:50:09.413257",
+        "updated_at": "2024-02-13T16:50:09.413294",
+        "__class__": "BaseModel"
     }
 }
