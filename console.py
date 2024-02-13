@@ -89,20 +89,25 @@ class HBNBCommand(cmd.Cmd):
                 for obj in self.fetched_objects.values():
                     new_model = obj
                     new_model.save()
+                self.all_ids.remove(arg_id)
         self.fetched_objects = storage.all()
 
     def do_all(self, arg):
         """prints string representation of all instances"""
+        str_rpr = []
         if arg:
             if arg not in self.all_classnames:
                 print("** class doesn't exist **")
             else:
+
                 for value in self.fetched_objects.values():
                     if value.__class__.__name__ == "BaseModel":
-                        print(value)
+                        str_rpr.append(str(value))
+                print(str_rpr)
         else:
             for value in self.fetched_objects.values():
-                print(value)
+                str_rpr.append(str(value))
+            print(str_rpr)
 
     def do_update(self, arg):
         """
