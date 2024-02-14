@@ -106,5 +106,145 @@
         "created_at": "2024-02-13T16:50:09.413257",
         "updated_at": "2024-02-13T16:50:09.413294",
         "__class__": "BaseModel"
+    },
+    "User.416dfae6-6813-4fdd-81f1-9a2e020a2eaf": {
+        "id": "416dfae6-6813-4fdd-81f1-9a2e020a2eaf",
+        "created_at": "2024-02-14T10:07:12.461037",
+        "updated_at": "2024-02-14T10:07:12.461043",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.6b2e4c53-3e60-4650-8aef-600a3b0d5aa0": {
+        "id": "416dfae6-6813-4fdd-81f1-9a2e020a2eaf",
+        "created_at": "2024-02-14T10:07:12.461037",
+        "updated_at": "2024-02-14T10:07:12.461043",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.593ebb1c-4d16-4281-81ab-e21ba0cd972e": {
+        "id": "593ebb1c-4d16-4281-81ab-e21ba0cd972e",
+        "created_at": "2024-02-14T10:07:12.461085",
+        "updated_at": "2024-02-14T10:07:12.461089",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.f870837e-faf0-45ee-b6fe-5543323ff46f": {
+        "id": "593ebb1c-4d16-4281-81ab-e21ba0cd972e",
+        "created_at": "2024-02-14T10:07:12.461085",
+        "updated_at": "2024-02-14T10:07:12.461089",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.2f69ec84-c179-4c0c-bd1a-7b5ede0e482c": {
+        "id": "2f69ec84-c179-4c0c-bd1a-7b5ede0e482c",
+        "created_at": "2024-02-14T10:07:12.461127",
+        "updated_at": "2024-02-14T10:07:12.461130",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.9169fe2e-22e5-4239-8334-a9969a39b31e": {
+        "id": "2f69ec84-c179-4c0c-bd1a-7b5ede0e482c",
+        "created_at": "2024-02-14T10:07:12.461127",
+        "updated_at": "2024-02-14T10:07:12.461130",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.524d9409-d8db-418d-8199-6b36c2783695": {
+        "id": "524d9409-d8db-418d-8199-6b36c2783695",
+        "created_at": "2024-02-14T10:07:12.461172",
+        "updated_at": "2024-02-14T10:07:12.461176",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.b455865c-bce5-4fdc-af30-ca9760932b11": {
+        "id": "524d9409-d8db-418d-8199-6b36c2783695",
+        "created_at": "2024-02-14T10:07:12.461172",
+        "updated_at": "2024-02-14T10:07:12.461176",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.ba17ad60-1f60-414d-bbb5-d2af96ce7668": {
+        "id": "ba17ad60-1f60-414d-bbb5-d2af96ce7668",
+        "created_at": "2024-02-14T10:07:12.461218",
+        "updated_at": "2024-02-14T10:07:12.461221",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.1cf67746-23c6-4a29-952f-049732cc1497": {
+        "id": "ba17ad60-1f60-414d-bbb5-d2af96ce7668",
+        "created_at": "2024-02-14T10:07:12.461218",
+        "updated_at": "2024-02-14T10:07:12.461221",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.98e52f77-d71e-4562-a530-229418867e86": {
+        "id": "98e52f77-d71e-4562-a530-229418867e86",
+        "created_at": "2024-02-14T10:07:12.461257",
+        "updated_at": "2024-02-14T10:07:12.461261",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.60517c85-f89a-492a-91f2-9bb94e86001e": {
+        "id": "98e52f77-d71e-4562-a530-229418867e86",
+        "created_at": "2024-02-14T10:07:12.461257",
+        "updated_at": "2024-02-14T10:07:12.461261",
+        "email": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "__class__": "User"
+    },
+    "User.80c8a2c8-1a12-4b7d-9dba-4210f7516941": {
+        "id": "80c8a2c8-1a12-4b7d-9dba-4210f7516941",
+        "created_at": "2024-02-14T10:07:12.461837",
+        "updated_at": "2024-02-14T10:07:12.461847",
+        "email": "airbnb@mail.com",
+        "password": "root",
+        "first_name": "Betty",
+        "last_name": "Bar",
+        "__class__": "User"
+    },
+    "User.213a568a-5ed0-48b3-aaec-be6afd0dfa63": {
+        "id": "213a568a-5ed0-48b3-aaec-be6afd0dfa63",
+        "created_at": "2024-02-14T10:07:12.462723",
+        "updated_at": "2024-02-14T10:07:12.462736",
+        "email": "airbnb2@mail.com",
+        "password": "root",
+        "first_name": "John",
+        "last_name": "",
+        "__class__": "User"
     }
 }
