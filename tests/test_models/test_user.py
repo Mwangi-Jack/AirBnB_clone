@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import unittest
+from unittest.mock import patch, MagicMock
 from models.user import User
 from models.base_model import BaseModel
 
@@ -22,6 +23,16 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.user.password, "")
         self.assertEqual(self.user.first_name, "")
         self.assertEqual(self.user.last_name, "")
+
+    # @patch('models.storage')
+    # def test_new(self, mock_storage):
+    #     """Test the new method of the User class."""
+    #     # Mock a BaseModel object
+    #     obj = MagicMock()
+    #     # Call the new method
+    #     user = User()
+    #     # Check if storage.new() is called
+    #     mock_storage.new.assert_called_once_with(user)
 
 
 if __name__ == '__main__':
