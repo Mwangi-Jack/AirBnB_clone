@@ -8,6 +8,10 @@ from models.base_model import BaseModel
 class TestState(unittest.TestCase):
     """Test cases for the State class."""
 
+    def setUp(self):
+        self.new_state = State()
+        self.new_state.name = 'Bahamas'
+
     def test_inheritance(self):
         """Test inheritance from BaseModel."""
         self.assertTrue(issubclass(State, BaseModel))
@@ -26,8 +30,7 @@ class TestState(unittest.TestCase):
 
     def test_to_dict_method(self):
         """Test the to_dict method of the State class."""
-        state = State()
-        state_dict = state.to_dict()
+        state_dict = self.new_state.to_dict()
         self.assertEqual(state_dict['__class__'], 'State')
         self.assertIn('id', state_dict)
         self.assertIn('created_at', state_dict)
@@ -36,8 +39,7 @@ class TestState(unittest.TestCase):
 
     def test_str_method(self):
         """Test the __str__ method of the State class."""
-        state = State()
-        state_str = str(state)
+        state_str = str(self.new_state)
         self.assertIn("[State]", state_str)
         self.assertIn("'id':", state_str)
         self.assertIn("'created_at':", state_str)
