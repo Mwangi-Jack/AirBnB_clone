@@ -44,6 +44,7 @@ class FileStorage:
                         cls_name = 'base_model'
                     else:
                         cls_name = class_name.lower()
+
                     module = __import__(f'models.{cls_name}',
                                         fromlist=[class_name])
                     cls = getattr(module, class_name)
