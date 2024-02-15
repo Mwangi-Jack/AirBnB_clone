@@ -1,26 +1,224 @@
 {
-    "User.fe336b8d-f21b-4755-b005-783bc665f3d5": {
-        "id": "fe336b8d-f21b-4755-b005-783bc665f3d5",
-        "created_at": "2024-02-14T22:57:19.438814",
-        "updated_at": "2024-02-14T22:57:19.438825",
-        "__class__": "User"
+    "BaseModel.ed4fc374-5d7a-4da3-9803-2d7a0aad7d15": {
+        "id": "ed4fc374-5d7a-4da3-9803-2d7a0aad7d15",
+        "created_at": "2024-02-15T13:19:47.242521",
+        "updated_at": "2024-02-15T13:19:47.242529",
+        "__class__": "BaseModel"
     },
-    "User.e29804c7-5513-432a-b757-cd93a1d47c0d": {
-        "id": "fe336b8d-f21b-4755-b005-783bc665f3d5",
-        "created_at": "2024-02-14T22:57:19.438814",
-        "updated_at": "2024-02-14T22:57:19.438825",
-        "__class__": "User"
+    "BaseModel.947d0b36-a12f-46c3-b947-bfc59409795f": {
+        "id": "947d0b36-a12f-46c3-b947-bfc59409795f",
+        "created_at": "2024-02-15T13:19:47.242635",
+        "updated_at": "2024-02-15T13:19:47.242638",
+        "__class__": "BaseModel"
     },
-    "User.12cadc51-5963-4061-883f-e8562903d0ca": {
-        "id": "12cadc51-5963-4061-883f-e8562903d0ca",
-        "created_at": "2024-02-14T22:57:19.438846",
-        "updated_at": "2024-02-14T22:57:19.438847",
-        "__class__": "User"
+    "BaseModel.fc65b720-337d-434d-9b85-f76e2e279d39": {
+        "id": "fc65b720-337d-434d-9b85-f76e2e279d39",
+        "created_at": "2024-02-15T13:19:47.244719",
+        "updated_at": "2024-02-15T13:19:47.254812",
+        "__class__": "BaseModel"
     },
-    "User.1d454c3d-940f-41b8-8cec-658e76e3d242": {
-        "id": "12cadc51-5963-4061-883f-e8562903d0ca",
-        "created_at": "2024-02-14T22:57:19.438846",
-        "updated_at": "2024-02-14T22:57:19.438847",
-        "__class__": "User"
+    "BaseModel.6d6bed59-5ef5-4db1-a23a-669a4ed45430": {
+        "id": "6d6bed59-5ef5-4db1-a23a-669a4ed45430",
+        "created_at": "2024-02-15T13:19:47.255367",
+        "updated_at": "2024-02-15T13:19:47.255373",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.f3889c0e-54cc-4d03-8485-d7e11c04143e": {
+        "id": "f3889c0e-54cc-4d03-8485-d7e11c04143e",
+        "created_at": "2024-02-15T13:19:47.255494",
+        "updated_at": "2024-02-15T13:19:47.255497",
+        "__class__": "BaseModel"
+    },
+    "City.a0df7c2b-3093-4431-8979-392b17b3c0d1": {
+        "id": "a0df7c2b-3093-4431-8979-392b17b3c0d1",
+        "created_at": "2024-02-15T13:19:47.255648",
+        "updated_at": "2024-02-15T13:19:47.255652",
+        "__class__": "City"
+    },
+    "City.654e688c-138a-47f1-8839-16449f55dd04": {
+        "id": "654e688c-138a-47f1-8839-16449f55dd04",
+        "created_at": "2024-02-15T13:19:47.255800",
+        "updated_at": "2024-02-15T13:19:47.255807",
+        "__class__": "City"
+    },
+    "City.f3f849c8-f31c-420b-a098-b82897b1a97e": {
+        "id": "f3f849c8-f31c-420b-a098-b82897b1a97e",
+        "created_at": "2024-02-15T13:19:47.256256",
+        "updated_at": "2024-02-15T13:19:47.256262",
+        "__class__": "City"
+    },
+    "City.6ccfb557-be63-438d-91a6-04c4d8af3949": {
+        "id": "6ccfb557-be63-438d-91a6-04c4d8af3949",
+        "created_at": "2024-02-15T13:19:47.256344",
+        "updated_at": "2024-02-15T13:19:47.256347",
+        "__class__": "City"
+    },
+    "Place.9ec4b0ff-4875-4856-b607-f39f38dee239": {
+        "id": "9ec4b0ff-4875-4856-b607-f39f38dee239",
+        "created_at": "2024-02-15T13:19:47.256456",
+        "updated_at": "2024-02-15T13:19:47.256460",
+        "city_id": "",
+        "user_id": "",
+        "name": "Bahamas",
+        "description": "Nice to be here",
+        "max_guest": 50,
+        "number_bathrooms": 4,
+        "price_by_night": 1400,
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "amenity_ids": [],
+        "number_rooms": 0,
+        "__class__": "Place"
+    },
+    "Place.6ef3b009-937c-4d87-8342-27f12c2775a1": {
+        "id": "6ef3b009-937c-4d87-8342-27f12c2775a1",
+        "created_at": "2024-02-15T13:19:47.256482",
+        "updated_at": "2024-02-15T13:19:47.256484",
+        "__class__": "Place"
+    },
+    "Place.74006bd5-c134-4471-bc60-c93a36e8ae35": {
+        "id": "74006bd5-c134-4471-bc60-c93a36e8ae35",
+        "created_at": "2024-02-15T13:19:47.256564",
+        "updated_at": "2024-02-15T13:19:47.256568",
+        "city_id": "",
+        "user_id": "",
+        "name": "Bahamas",
+        "description": "Nice to be here",
+        "max_guest": 50,
+        "number_bathrooms": 4,
+        "price_by_night": 1400,
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "amenity_ids": [],
+        "number_rooms": 0,
+        "__class__": "Place"
+    },
+    "Place.6b128913-547b-4413-b160-5906c292060c": {
+        "id": "6b128913-547b-4413-b160-5906c292060c",
+        "created_at": "2024-02-15T13:19:47.256622",
+        "updated_at": "2024-02-15T13:19:47.256625",
+        "city_id": "",
+        "user_id": "",
+        "name": "Bahamas",
+        "description": "Nice to be here",
+        "max_guest": 50,
+        "number_bathrooms": 4,
+        "price_by_night": 1400,
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "amenity_ids": [],
+        "number_rooms": 0,
+        "__class__": "Place"
+    },
+    "Place.1763491e-a493-4c8e-94be-701b6ae1065c": {
+        "id": "1763491e-a493-4c8e-94be-701b6ae1065c",
+        "created_at": "2024-02-15T13:19:47.256642",
+        "updated_at": "2024-02-15T13:19:47.256647",
+        "__class__": "Place"
+    },
+    "Place.762f0dbe-4ff0-46c6-aff4-22079cc1e660": {
+        "id": "762f0dbe-4ff0-46c6-aff4-22079cc1e660",
+        "created_at": "2024-02-15T13:19:47.257156",
+        "updated_at": "2024-02-15T13:19:47.257173",
+        "city_id": "",
+        "user_id": "",
+        "name": "Bahamas",
+        "description": "Nice to be here",
+        "max_guest": 50,
+        "number_bathrooms": 4,
+        "price_by_night": 1400,
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "amenity_ids": [],
+        "number_rooms": 0,
+        "__class__": "Place"
+    },
+    "Place.f8170dc1-4725-48cf-ab4f-ad4ee16c039a": {
+        "id": "f8170dc1-4725-48cf-ab4f-ad4ee16c039a",
+        "created_at": "2024-02-15T13:19:47.257258",
+        "updated_at": "2024-02-15T13:19:47.257260",
+        "city_id": "",
+        "user_id": "",
+        "name": "Bahamas",
+        "description": "Nice to be here",
+        "max_guest": 50,
+        "number_bathrooms": 4,
+        "price_by_night": 1400,
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "amenity_ids": [],
+        "number_rooms": 0,
+        "__class__": "Place"
+    },
+    "Review.5f16baf0-fc78-4341-8053-69f399ed7731": {
+        "id": "5f16baf0-fc78-4341-8053-69f399ed7731",
+        "created_at": "2024-02-15T13:19:47.257350",
+        "updated_at": "2024-02-15T13:19:47.257353",
+        "place_id": "",
+        "user_id": "1ed86a56-0058-4c80-ae9c-a9a3a71be286",
+        "text": "Nice to be here",
+        "__class__": "Review"
+    },
+    "Review.bde300c2-2140-4ac4-9c2a-cc062b5f13d8": {
+        "id": "bde300c2-2140-4ac4-9c2a-cc062b5f13d8",
+        "created_at": "2024-02-15T13:19:47.257375",
+        "updated_at": "2024-02-15T13:19:47.257377",
+        "__class__": "Review"
+    },
+    "Review.813b6485-6581-4a6e-baa8-6eec8d2fe949": {
+        "id": "813b6485-6581-4a6e-baa8-6eec8d2fe949",
+        "created_at": "2024-02-15T13:19:47.257424",
+        "updated_at": "2024-02-15T13:19:47.257427",
+        "place_id": "",
+        "user_id": "e9c49874-41ea-40c8-a9ff-6c984e80be48",
+        "text": "Nice to be here",
+        "__class__": "Review"
+    },
+    "Review.9717010a-25a0-40e4-9ff7-09f57e7a9cb1": {
+        "id": "9717010a-25a0-40e4-9ff7-09f57e7a9cb1",
+        "created_at": "2024-02-15T13:19:47.257473",
+        "updated_at": "2024-02-15T13:19:47.257476",
+        "place_id": "",
+        "user_id": "d8570ba4-33fe-4ce8-810e-cdaf8a16c4e5",
+        "text": "Nice to be here",
+        "__class__": "Review"
+    },
+    "Review.5da952d6-34d6-4293-a0b5-e353ed4a16cd": {
+        "id": "5da952d6-34d6-4293-a0b5-e353ed4a16cd",
+        "created_at": "2024-02-15T13:19:47.257492",
+        "updated_at": "2024-02-15T13:19:47.257495",
+        "__class__": "Review"
+    },
+    "Review.14cb8497-c480-4a5b-8785-959449875215": {
+        "id": "14cb8497-c480-4a5b-8785-959449875215",
+        "created_at": "2024-02-15T13:19:47.258238",
+        "updated_at": "2024-02-15T13:19:47.258247",
+        "place_id": "",
+        "user_id": "c1dffa73-3ba2-42f7-84ec-4e57f0cf1a82",
+        "text": "Nice to be here",
+        "__class__": "Review"
+    },
+    "Review.b1fd0144-f974-41d5-b5e0-24f92dcc489f": {
+        "id": "b1fd0144-f974-41d5-b5e0-24f92dcc489f",
+        "created_at": "2024-02-15T13:19:47.258338",
+        "updated_at": "2024-02-15T13:19:47.258340",
+        "place_id": "",
+        "user_id": "a0aa9f25-f7c2-4603-a259-6436dbbc28c8",
+        "text": "Nice to be here",
+        "__class__": "Review"
+    },
+    "State.e39edee9-9c61-4132-abac-8524fb02ac2c": {
+        "id": "e39edee9-9c61-4132-abac-8524fb02ac2c",
+        "created_at": "2024-02-15T13:19:47.258460",
+        "updated_at": "2024-02-15T13:19:47.258463",
+        "name": "",
+        "__class__": "State"
+    },
+    "State.01a34320-2432-4704-9bc7-c6d72ef7a5c2": {
+        "id": "01a34320-2432-4704-9bc7-c6d72ef7a5c2",
+        "created_at": "2024-02-15T13:19:47.258534",
+        "updated_at": "2024-02-15T13:19:47.258539",
+        "name": "",
+        "__class__": "State"
     }
 }

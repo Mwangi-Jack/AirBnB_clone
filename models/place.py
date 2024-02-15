@@ -7,8 +7,8 @@ from models.base_model import BaseModel
 class Place(BaseModel):
     """Class Place inheriting from the BaseModel Class"""
 
-    city_id = "City.id"
-    user_id = "User.id"
+    city_id = ""
+    user_id = ""
     name = ""
     description = ""
     number_rooms = 0
