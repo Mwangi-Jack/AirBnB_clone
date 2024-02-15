@@ -125,6 +125,7 @@ class HBNBCommand(cmd.Cmd):
 
         print(objs)
 
+
     def do_update(self, arg):
         """
         Updates an instance based on the class name and id
