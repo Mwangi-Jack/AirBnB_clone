@@ -1,0 +1,72 @@
+section.filters {
+	background-color: white;
+	height: 70px;
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	display:flex;
+	align-items: center;
+	padding-right: 30px;
+
+}
+
+section.filters button {
+	font-size: 18px;
+	background-color: #FF5A5F;
+	color: #FFFFFF;
+	height: 48px;
+	width: 20%;
+	border-radius: 4px;
+	margin-left: 20rem
+}
+
+section.filters button:hover {
+	opacity: 90%;
+}
+
+.popover {
+    display: none;
+    position: absolute;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    z-index: 1;
+	margin-top: -19px;
+}
+
+.locations, .amenities {
+    position: relative;
+    cursor: pointer;
+	height: 100%;
+	width: 25%;
+	/* border: 1px solid black; */
+	flex-grow: 6
+
+}
+
+.locations {
+	border-right: 1px solid #DDDDDD;
+}
+
+.locations:hover .popover, .amenities:hover .popover {
+    display: block; /* Display the dropdown when hovering over the filter */
+}
+
+.popover{
+	width: 100%;
+}
+
+.locations .popover ul, .amenities .popover ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.locations .popover ul li {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.locations .popover ul li h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
